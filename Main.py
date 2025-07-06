@@ -9,7 +9,7 @@ running_score = 0
 while user_score < 2 and computer_score < 2:
     choice = r_p_s.make_user_choice()
     opponent_choice = r_p_s.make_computer_choice()
-    visuals.visual(choice, opponent_choice)
+    r_p_s.visual(choice, opponent_choice)
 
     # Restarts if a tie. Does not update score.
     if choice == opponent_choice:
@@ -43,7 +43,7 @@ if again_choice == True:
     while user_score < 2 and computer_score < 2:
         choice = r_p_s.make_user_choice()
         opponent_choice = r_p_s.make_computer_choice()
-        visuals.visual(choice, opponent_choice)
+        r_p_s.visual(choice, opponent_choice)
 
         # Restarts if a tie. Does not update score.
         if choice == opponent_choice:
