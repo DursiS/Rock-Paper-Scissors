@@ -1,5 +1,4 @@
 import r_p_s
-import visuals
 
 user_score = 0
 computer_score = 0
@@ -49,7 +48,7 @@ if again_choice == True:
         # Restarts if a tie. Does not update score.
         if choice == opponent_choice:
             print("It's a tie!")
-            continue
+
 
         if r_p_s.wins_matchup(choice, opponent_choice):
             print("You win!")
@@ -65,8 +64,4 @@ if again_choice == True:
             running_score += 1
         elif computer_score >= 2:
             running_score += 1
-        
-        #Re-asks them to play again
-        continue
-elif again_choice == False:
-    print("Terminating...")
+
