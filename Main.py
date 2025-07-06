@@ -1,4 +1,5 @@
 import r_p_s
+import visuals
 
 user_score = 0
 computer_score = 0
@@ -9,7 +10,7 @@ running_score = 0
 while user_score < 2 and computer_score < 2:
     choice = r_p_s.make_user_choice()
     opponent_choice = r_p_s.make_computer_choice()
-    r_p_s.visual(choice, opponent_choice)
+    visuals.visual(choice, opponent_choice)
 
     # Restarts if a tie. Does not update score.
     if choice == opponent_choice:
@@ -43,7 +44,7 @@ if again_choice == True:
     while user_score < 2 and computer_score < 2:
         choice = r_p_s.make_user_choice()
         opponent_choice = r_p_s.make_computer_choice()
-        r_p_s.visual(choice, opponent_choice)
+        visuals.visual(choice, opponent_choice)
 
         # Restarts if a tie. Does not update score.
         if choice == opponent_choice:
@@ -64,3 +65,8 @@ if again_choice == True:
             running_score += 1
         elif computer_score >= 2:
             running_score += 1
+        
+        #Re-asks them to play again
+        continue
+elif again_choice == False:
+    print("Terminating...")
